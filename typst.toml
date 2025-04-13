@@ -1,6 +1,6 @@
 [package]
 name = "not-jku-thesis"
-version = "0.1.0"
+version = "0.2.0"
 entrypoint = "template.typ"
 authors = ["Raphael Siegl"]
 license = "MIT-0"
@@ -9,7 +9,7 @@ categories = ["thesis"]
 homepage = "https://github.com/Slyde-R/not-jku-thesis-template"
 keywords = ["Johannes Kepler Universtät", "JKU", "Thesis", "Masterarbeit", "Bachelorarbeit", "Final Thesis", "Bachelor's  Thesis", "Master's  Thesis"]
 disciplines = []
-compiler = "0.11.0"
+compiler = "0.13.1"
 
 [template]
 path = "template"

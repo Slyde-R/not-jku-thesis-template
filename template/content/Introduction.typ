@@ -1,6 +1,6 @@
 #import "../utils.typ": todo, silentheading, flex-caption
 
-= Introduction <chapter_introduction>
+= Introduction 
 <intro>
 #todo[replace this chapter with your introduction]
 @intro

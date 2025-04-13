@@ -1,11 +1,11 @@
-//#import "@local/not-JKU-thesis:0.1.0": jku-thesis // for development
-#import "@preview/not-JKU-thesis:0.1.0": jku-thesis
-
+#import "@local/not-jku-thesis:0.2.0": jku-thesis
 #import "utils.typ": inwriting, draft, todo, flex-caption, flex-caption-styles
 #import "glossary.typ": glossary
-#import "@preview/glossarium:0.2.6": make-glossary, print-glossary, gls, glspl
+#import "@preview/glossarium:0.5.4": make-glossary, register-glossary, print-glossary, gls, glspl
 
 #show: make-glossary
+#register-glossary(glossary)
+
 #show: flex-caption-styles
 
 
@@ -24,7 +24,8 @@
 #set text(lang: "en", weight: "regular", font: "Arial", size: 11pt)
 #set text(ligatures: false)
 #set par(leading: 1em, first-line-indent: 0em, justify: true)
-#show par: set block(spacing: 1.5em) // spacing after a paragraph
+//#show par: set block(spacing: 1.5em) // spacing after a paragraph
+#set par(spacing: 1.5em)
 #show raw: set text( size: 9pt) // set text for code-blocks (``)
 
 #set page(margin: (left: 2.5cm+1cm, // binding correction of 1cm for single sided printing
@@ -172,6 +173,7 @@ To everyone who contributed to this thesis, directly or indirectly, I offer my h
   depth: 3
 )<outline>
 #pagebreak(weak: false)
+
 
 
 // --- Main Chapters ---

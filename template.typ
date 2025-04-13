@@ -3,11 +3,9 @@
 #import "acknowledgement.typ": *
 #import "abstract.typ": *
 
-#import "@preview/wordometer:0.1.2": word-count, total-words
-
 
 #let jku-thesis(
-  thesis-type: "Bachlor/Maser/etc",
+  thesis-type: "Bachlor/Master/...",
   degree: "The degree",
   program: "The Program",
   supervisor: "Your Supervisor",
@@ -51,35 +49,26 @@
       #if show-title-in-header [
         #author - #title
       ]
-      
       #if draft [
         DRAFT
       ]
-    ]}, 
+    ]},
+
     footer: context [//overwrite numbering
-  #text(size:9pt)[
-    #table(
-      stroke: none,
-      columns:  (1fr, auto, 1fr),
-      align: (left, center, right),
-      inset: 5pt,
-      [],[],[],
-      
-    )
-  ]
-]
+      #text(size:9pt)[
+        #table(
+          stroke: none,
+          columns:  (1fr, auto, 1fr),
+          align: (left, center, right),
+          inset: 5pt,
+          [],[],[],
+          
+        )
+      ]
+    ]
+  )
 
-)
-  
-
-
-
-
-
-  
-
-
-
+  // insert titlepage
   titlepage(
     thesis-type: thesis-type,
     degree: degree,
@@ -91,9 +80,10 @@
     date: date ,
     title: title
   )
-  pagebreak()
 
+  pagebreak() // empty page after titlepage
 
+  // insert disclaimer
   disclaimer(
     date: date,
     place-of-submission: place-of-submission,
@@ -104,14 +94,16 @@
     #acknowledgement(acknowledgements)
   ]
 
+  //insert english abstract
   abstract(lang: "en")[#abstract-en]
 
+  // insert german abstract if provided
   if abstract-de != none [ // optional
     #abstract(lang: "de")[#abstract-de]
   ]
-
+  // reset the page numbering
   counter(page).update(1)
 
-  body
+  body // TODO ?
 
 }

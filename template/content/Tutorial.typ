@@ -1,5 +1,5 @@
 #import "../utils.typ": todo, silentheading, flex-caption
-#import "@preview/wrap-it:0.1.0": wrap-content
+#import "@preview/wrap-it:0.1.1": wrap-content
 
 = Tutorial <Tutorial>
 #todo[Exclude this chapter!]

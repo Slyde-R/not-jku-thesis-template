@@ -12,7 +12,7 @@
 ) ={
 
   set par(leading: 0.65em, first-line-indent: 0em, justify: false)
-  show par: set block(spacing: 1.2em) // spacing after a paragraph
+  //show par: set block(spacing: 1.2em) // spacing after a paragraph
 
   place(bottom+left,float: false, dx: 0cm, dy:-10%)[#box(width: 74%)[
 
@@ -77,11 +77,6 @@
               4040 Linz, Austria\
               jku.at\
             ]
-            
-
-
-
-            
           ]
       ]
     ]
