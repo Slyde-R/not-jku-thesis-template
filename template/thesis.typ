@@ -52,7 +52,8 @@
   date: date,
   place-of-submission: "Linz",
   title: "Purrfection: How Cats Skillfully Train and Manipulate Humans to Serve Their Every Need",
-  abstract-en: [//max. 250 words
+  include-disclaimer: true,//
+  abstract-en: [//max. 250 words // can be none if no abstract is needed
     This study explores the intricate ways in which domestic cats employ manipulation tactics to influence human behavior. Utilizing a mixed-methods approach that combines observational data, surveys, and interviews, this research investigates how cats utilize vocalizations, body language, and attention-seeking behaviors to achieve their goals, ranging from soliciting food to initiating play.
 
     The findings reveal that cats predominantly use vocalizations such as meowing, purring, and chirping to manipulate their human companions. Meowing is particularly effective for demanding attention and food, while purring is often used to enhance bonding and comfort. Chirps and trills are employed to encourage play and interaction. Additionally, body language such as kneading, tail positioning, and eye contact play significant roles in communication and manipulation. Attention-seeking behaviors, including climbing, rubbing, and bringing objects, are crucial in eliciting responses from humans.
@@ -61,7 +62,7 @@
 
     This work offers practical implications for enhancing human-cat interactions and improving the understanding of feline behavior, fostering more harmonious relationships between cats and their human companions.  
   ],
-  abstract-de: none,// or specify the abbstract_de in a container []
+  abstract-de: [dsfs]],// or specify the abbstract_de in a container []
   acknowledgements: [
 I would like to extend a huge thank you to Dr. Felina Whiskers, my primary advisor, for her pawsitive support and expert guidance. Without her wisdom and occasional catnip breaks, this thesis might have turned into a hairball of confusion.
 

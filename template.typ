@@ -1,7 +1,7 @@
-#import "titlepage.typ": *
-#import "disclaimer.typ": *
-#import "acknowledgement.typ": *
-#import "abstract.typ": *
+#import "titlepage.typ": titlepage
+#import "disclaimer.typ": disclaimer
+#import "acknowledgement.typ": acknowledgement
+#import "abstract.typ": abstract
 
 
 #let jku-thesis(
@@ -15,6 +15,7 @@
   date: "The Submission Date",
   place-of-submission: "Place of Submission", // for declaration
   title: "Title",
+  include-disclaimer: true,
   abstract-en: [English Abstract],
   abstract-de: none,
   acknowledgements: none,
@@ -81,21 +82,25 @@
     title: title
   )
 
-  pagebreak() // empty page after titlepage
 
   // insert disclaimer
-  disclaimer(
+  if include-disclaimer [
+    #disclaimer(
     date: date,
     place-of-submission: place-of-submission,
     thesis-type: thesis-type,
     author: author,
   )
+  ]
+
   if acknowledgements != none [ // optional
     #acknowledgement(acknowledgements)
   ]
 
   //insert english abstract
-  abstract(lang: "en")[#abstract-en]
+  if abstract-en != none [
+    #abstract(lang: "en")[#abstract-en]
+  ] 
 
   // insert german abstract if provided
   if abstract-de != none [ // optional
@@ -104,6 +109,25 @@
   // reset the page numbering
   counter(page).update(1)
 
-  body // TODO ?
+  body
 
 }
+
+// DEBUG: test call
+// #jku-thesis(
+//   thesis-type: "Bachlor/Master/...",
+//   degree: "The degree",
+//   program: "The Program",
+//   supervisor: "Your Supervisor",
+//   advisors: ("The first advisor", "The second advisor"),
+//   department: "The Deparment",
+//   author: "The Author",
+//   date: "The Submission Date",
+//   place-of-submission: "Place of Submission", // for declaration
+//   title: "Title",
+//   abstract-en: [English Abstract],
+//   abstract-de: none,
+//   acknowledgements: none,
+//   show-title-in-header: true,
+//   draft: true,
+// )[]
