@@ -1,6 +1,6 @@
 [package]
 name = "not-jku-thesis"
-version = "0.2.0"
+version = "0.2.1"
 entrypoint = "template.typ"
 authors = ["Raphael Siegl"]
 license = "MIT-0"

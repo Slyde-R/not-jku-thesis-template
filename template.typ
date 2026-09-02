@@ -35,9 +35,7 @@
   set page(
     numbering: "1", // this is necessary for the glossary
     //number-align: center,
-    margin: (left: 2.5cm+1cm, // binding correction of 1cm for single sided printing
-              right: 2.5cm,
-              y: 2.9cm),
+    // removed margin here so that the margin settings in the project take over
     header: context{[
       #if counter(page).get().first() > 2 [
         #place(top+right ,float: false, dx: 0cm, dy:1cm)[

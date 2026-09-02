@@ -3,8 +3,7 @@
 #import "glossary.typ": glossary
 #import "@preview/glossarium:0.5.4": make-glossary, register-glossary, print-glossary, gls, glspl
 
-#show: make-glossary
-#register-glossary(glossary)
+
 
 #show: flex-caption-styles
 
@@ -28,13 +27,18 @@
 #set par(spacing: 1.5em)
 #show raw: set text( size: 9pt) // set text for code-blocks (``)
 
-#set page(margin: (left: 2.5cm+1cm, // binding correction of 1cm for single sided printing
+
+#set page(margin: (left: 2.5cm, // digital version - no binding correction
                    right: 2.5cm,
                    y: 2.9cm),
+          // margin: (left: 2.5cm+1cm, // binding correction of 1cm for single sided printing
+                  //  right: 2.5cm,
+                  //  y: 2.9cm),
           // margin: (inside: 2.5cm+1cm, // binding correction of 1cm for double sided printing
           //          outside: 2.5cm,
           //          y:2.5cm),
           // binding: left
+          
                    )
 
 #let date =  datetime.today() // not today: datetime(year: 1969, month: 9, day: 6,)
@@ -62,7 +66,7 @@
 
     This work offers practical implications for enhancing human-cat interactions and improving the understanding of feline behavior, fostering more harmonious relationships between cats and their human companions.  
   ],
-  abstract-de: [dsfs]],// or specify the abbstract_de in a container []
+  abstract-de: none,// or specify the abbstract_de in a container []
   acknowledgements: [
 I would like to extend a huge thank you to Dr. Felina Whiskers, my primary advisor, for her pawsitive support and expert guidance. Without her wisdom and occasional catnip breaks, this thesis might have turned into a hairball of confusion.
 
@@ -161,6 +165,9 @@ To everyone who contributed to this thesis, directly or indirectly, I offer my h
     )
   ]
 ])
+
+#show: make-glossary
+#register-glossary(glossary)
 
 // ------ Content ------
 

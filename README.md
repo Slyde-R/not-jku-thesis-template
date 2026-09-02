@@ -11,6 +11,8 @@ typst init @preview/jku-thesis
 
 Typst will create a new directory with all the files needed to get you started.
 
+With version `0.2.1` the disclaimer and the english abstract can be excluded from the document for greater versatility of the template.
+
 ## Configuration
 This template exports the `jku-thesis` function with the following named arguments:
 
@@ -24,7 +26,8 @@ This template exports the `jku-thesis` function with the following named argumen
 - `date`: datetime
 - `place-of-submission`: string
 - `title`: String
-- `abstract-en`: Content block
+- `include-disclaimer`: Boolean
+- `abstract-en`: Content block or none
 - `abstract-de`: optional: Content block or none
 - `acknowledgements`: optional: Content block or none
 - `show-title-in-header`: Boolean

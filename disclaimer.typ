@@ -14,8 +14,6 @@
   [
 
   I hereby declare under oath that the submitted #thesis-type's Thesis has been written solely by me without any third-party assistance, information other than provided sources or aids have not been used and those used have been fully documented. Sources for literal, paraphrased and cited quotes have been accurately credited.
-    
-  The submitted document here present is identical to the electronically  submitted text document.
 
   #v(25mm)
   // Option 1
